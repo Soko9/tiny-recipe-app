@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Concert+One&display=swap');
+
+:root {
+    --font: 'Concert One', cursive;
+    --bg-color: #1F1D36;
+    --red: #C85C5C;
+    --orange: #F9975D;
+    --yellow: #FBD148;
+    --green: #B2EA70;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--font);
+    transition: all 300ms ease-in-out;
+}
+
+body {
+    background-color: var(--bg-color);
+}
+
+.cmp-header {
+    width: 100%;
+    height: fit-content;
+    padding: 1rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--red);
+}
+
+.cmp-header h1 {
+    flex: .8;
+    font-size: 2.2rem;
+    text-align: center;
+    color: var(--bg-color);
+    font-weight: bold;
+}
+
+.cmp-header form {
+    flex: .7;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.cmp-header form input {
+    width: 90%;
+    padding: .2rem .5rem .6rem .5rem;
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--bg-color);
+}
+
+.cmp-header form input:focus {
+    outline: none;
+    caret-color: white;
+}
+
+.cmp-header form button {
+    margin: 0 .5rem;
+    font-size: 1.2rem;
+    border: none;
+    background-color: var(--green);
+    color: var(--bg-color);
+    padding: .75rem 1rem ;
+    border-radius: 2px;
+    cursor: pointer;
+    font-size: 1.5rem;
+}
+
+.cmp-header form button:hover {
+    background-color: #81b446;
+}
