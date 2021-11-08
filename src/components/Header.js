@@ -1,16 +1,16 @@
-import React, { useState } from 'react';
+import React, { useContext } from 'react';
+import { GlobalContext } from '../context/store';
 
 function Header() {
-    const [searchText, updateSearchText] = useState("");
+    const { query, cuisine, diet, intolerance, type, spoon } = useContext(GlobalContext);
 
     const handleSearchText = event => {
-        updateSearchText(event.target.value);
+        spoon(event.target.value);
     }
 
     const handleSearchSubmit = event => {
         event.preventDefault();
-        alert(searchText);
-        updateSearchText("");
+        alert(`${query} - ${cuisine} - ${diet} - ${intolerance} - ${type}`);
     }
 
     return (
@@ -21,7 +21,7 @@ function Header() {
                     type="text"
                     name="searchText"
                     placeholder="powered by spoonacular.com"
-                    value={searchText}
+                    value={query}
                     onChange={(e) => handleSearchText(e)}
                 />
                 <button

@@ -1,11 +1,15 @@
 import './App.css';
 import Header from './components/Header';
+import Filters from './components/Filters';
+import { GlobalProvider } from './context/store';
 
 function App() {
   return (
-    <div>
+    <GlobalProvider>
       <Header />
-    </div>
+      <Filters />
+      <hr/>
+    </GlobalProvider>
   );
 }
 
