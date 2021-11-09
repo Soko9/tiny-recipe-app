@@ -1,6 +1,7 @@
 import './App.css';
 import Header from './components/Header';
 import Filters from './components/Filters';
+import Card from './components/Card';
 import { GlobalProvider } from './context/store';
 
 function App() {
@@ -9,6 +10,7 @@ function App() {
       <Header />
       <Filters />
       <hr/>
+      <Card />
     </GlobalProvider>
   );
 }

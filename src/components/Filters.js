@@ -7,11 +7,11 @@ import IntoleranceFilter from './IntoleranceFilter';
 function Filters() {
     return (
         <>
-            <h2>Filter Out Your Recipes</h2>
+            <h2 className="filter-title">Filter Out Your Recipes</h2>
             <div className="cmp-filters">
                 <CuisineFilter />
-                <DietFilter />
                 <TypeFilter />
+                <DietFilter />
                 <IntoleranceFilter />
             </div>
         </>

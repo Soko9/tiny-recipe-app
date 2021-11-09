@@ -5,27 +5,20 @@ import { GlobalContext } from '../context/store';
 function IntoleranceFilter() {
     const { filterIntolerance } = useContext(GlobalContext);
 
-    const handleChange = event => {
-        filterIntolerance(event.target.value);
-    }
-
     return (
         <div className="cmp-filter">
             <h4>Intolerances</h4>
-            <div className="options">
+            <select className="options" onChange={(e) => filterIntolerance(e.target.value)}>
                 {CONSTANTS.INTOLERANCE_OPTIONS.map((item, index) => {
                     return (
-                        <label key={index}>
-                            <input
-                                type="radio"
-                                name="intolerance"
-                                value={item}
-                                onChange={(e) => handleChange(e)}
-                            /> {item}
-                        </label>
+                        <option
+                            key={index}
+                            value={item}>
+                                {item}
+                        </option>
                     );
                 })}
-            </div>
+            </select>
         </div>
     )
 }
