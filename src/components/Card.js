@@ -8,7 +8,7 @@ function Card() {
     const [results, updateResults] = useState([]);
 
     useEffect(() => {
-        fetch(`${CONSTANTS.URL}/complexSearch?query=${query}&cuisine=${cuisine}&diet=${diet}&intolerances=${intolerance}&type=${type}&number=15&apiKey=${CONSTANTS.API_KEY}`)
+        fetch(`${CONSTANTS.URL}/complexSearch?query=${query}&cuisine=${cuisine.toLowerCase()}&diet=${diet.toLowerCase()}&intolerances=${intolerance.toLowerCase()}&type=${type.toLowerCase()}&number=15&apiKey=${CONSTANTS.API_KEY}`)
         .then(res => {
             if (res.ok)
                 return res.json()
@@ -32,10 +32,7 @@ function Card() {
             {results.map((item, index) => {
                 return (
                     <div className="card" style={{
-                        background: `url('${item.image}')`,
-                        backgroundSize: 'cover',
-                        backgroundRepeat: 'no-repeat',
-                        backgroundPosition: 'center center'
+                        backgroundImage: `url('${item.image}')`
                     }} key={index}>
                         <h3>{item.title}</h3>
                         <h5>{item.id}</h5>

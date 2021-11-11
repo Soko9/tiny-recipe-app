@@ -139,44 +139,56 @@ input[type="radio"] {
 
 .cmp-cards {
     display: grid;
-    padding: 1rem;
+    padding: 6rem;
     grid-template-columns: repeat(3, 1fr);
     align-items: center;
     justify-content: center;
-    column-gap: 3rem;
-    row-gap: 3rem;
+    column-gap: 6rem;
+    row-gap: 6rem;
 }
 
 .cmp-cards .card {
     height: 20rem;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
     border: 2px solid var(--red);
+    border-radius: 2px;
     position: relative;
     opacity: .5;
     cursor: pointer;
 }
 
-.cmp-cards .card:hover {
+.cmp-cards .card:hover,
+.cmp-cards .card:hover h3 {
     opacity: 1;
+    background-color: transparent;
+    color: transparent;
 }
 
 .cmp-cards > .card > h3 {
     width: 100%;
     position: absolute;
-    bottom: 1rem;
+    text-align: center;
+    bottom: 0;
+    padding: 1rem;
     text-align: center;
     font-size: 1.5rem;
     color: white;
+    background-color: var(--bg-color);
 }
 
 .cmp-cards > .card > h5 {
     height: 25px;
     position: absolute;
     top: -26px;
-    right: -1px;
+    left: 50%;
+    transform: translateX(-50%);
     border: 2px solid var(--red);
     font-size: .8rem;
     border-bottom: none;
     padding: .2rem .6rem 0 .6rem;
     letter-spacing: 2px;
     color: white;
+    font-family: monospace;
 }

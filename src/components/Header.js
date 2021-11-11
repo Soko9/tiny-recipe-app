@@ -24,9 +24,9 @@ function Header() {
                     value={query}
                     onChange={(e) => handleSearchText(e)}
                 />
-                <button
+                {/* <button
                     type="submit"
-                >SPOON</button>
+                >SPOON</button> */}
             </form>
         </div>
     )
